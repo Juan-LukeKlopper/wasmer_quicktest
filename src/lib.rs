@@ -1,14 +1,8 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+wai_bindgen_rust::export!("calculator.wai");
+
+struct Calculator;
+
+impl crate::calculator::Calculator for Calculator {
+    fn add(a:f32,b:f32,) -> f32 { a + b }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
